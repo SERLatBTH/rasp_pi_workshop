@@ -1,8 +1,13 @@
 from time import sleep
-from  __init__ import connect, count, led_off, led_on, read_sensor_humidity, read_sensor_temperature
+from  __init__ import connect, count, led_off, led_on, \
+    read_sensor_humidity, read_sensor_temperature, \
+    exit_sensor
 
 
 def main():
+    # Connect to the Raspberry Pi
+    connect()
+
     print("Step 1/3: Count and print")
     for _ in range(3):
         c = count()
@@ -28,9 +33,12 @@ def main():
         )
         print(msg)
         sleep(1)
+
+    # Disconnect from the Raspberry Pi
+    exit_sensor()
+
     return 0
 
 
 if __name__ == "__main__":
-    connect()
     main()

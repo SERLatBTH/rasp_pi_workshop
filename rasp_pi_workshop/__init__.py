@@ -74,3 +74,6 @@ def led_on():
 def led_off():
     GPIO.setup(LED_PIN, GPIO.OUT)
     GPIO.output(LED_PIN, GPIO.HIGH)  # Turn off LED
+
+def exit_sensor():
+    DHT_SENSOR.exit()
