@@ -73,6 +73,10 @@ def interactive_agent_loop(agent: ReActAgent):
         
         # Run the agent with verbose output
         response = agent.chat(user_input)
-        
+
+        # Uncomment the following lines to use streaming chat instead of regular chat
+        #response = agent.stream_chat(user_input)
+        #response.print_response_stream()
+
         print(f"\n✅ FINAL RESPONSE:\n{response}")
         print("\n==== END OF PROCESS ====")
