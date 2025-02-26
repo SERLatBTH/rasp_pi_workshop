@@ -35,7 +35,7 @@ def main():
     # Setup LLM with vLLM
     print("Setting up LLM...")
     llm = setup_llm(
-        model="smollm2:360m",  # Replace with your model name
+        model="llama3.2:3b",  # Replace with your model name
         temperature=0.4,
         max_tokens=4096,
         api_base="http://localhost:11434",
