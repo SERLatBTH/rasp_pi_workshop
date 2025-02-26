@@ -9,7 +9,6 @@ help:
 	@echo "  make os-deps			- Install OS dependencies"
 	@echo "  make install-uv		- Install uv package manager if not present"
 	@echo "  make setup-venv		- Create Python virtual environment"
-	@echo "  make activate-venv		- Show instructions to activate the virtual environment"
 	@echo "  make install-deps		- Install Python dependencies from pyproject.toml"
 	@echo "  make install-ollama	- Install Ollama"
 
@@ -42,11 +41,6 @@ setup-venv:
 	@echo "Creating Python virtual environment..."
 	uv venv --python python3.12
 	@echo "Virtual environment created successfully."
-
-# Show instructions to activate the virtual environment
-.PHONY: activate-venv
-activate-venv:
-	bash -c "source .venv/bin/activate"
 
 # Install Python dependencies
 .PHONY: install-deps

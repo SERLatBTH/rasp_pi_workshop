@@ -43,7 +43,6 @@ After the hands-on coding experience, the workshop organizer shall ask the stude
    - Run `make install-uv` to install the uv package manager
    - Run `make setup-venv` to create a Python virtual environment
    - Run `make install-deps` to install Python dependencies
-   - Use `make activate-venv` to see instructions for activating the virtual environment
    - Use `make install-ollama` to install the ollama
 6. Run `ollama run smollm2:360m` to start the LM server
 
