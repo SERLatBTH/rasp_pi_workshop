@@ -8,7 +8,7 @@ from llama_index.core.llms.llm import LLM
 from llama_index.core.tools import BaseTool
 
 
-def create_agent(llm: LLM, tools: Optional[List[BaseTool]] = None):
+def create_agent(llm: LLM, tools: Optional[List[BaseTool]] = None, max_iterations: int = 10) -> ReActAgent:
     """
     Create a ReAct agent with the provided LLM and tools.
     
@@ -24,6 +24,7 @@ def create_agent(llm: LLM, tools: Optional[List[BaseTool]] = None):
         tools=tools,
         llm=llm,
         verbose=True,
+        max_iterations=max_iterations
     )
     
     return agent

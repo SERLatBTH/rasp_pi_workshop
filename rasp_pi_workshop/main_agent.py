@@ -57,7 +57,8 @@ def main():
             humidity_tool,
             # py_code_exec_tool,
             # Add more tools here as needed
-        ]
+        ],
+        max_iterations=20,
     )
     
     # Start interactive loop
