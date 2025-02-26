@@ -19,8 +19,8 @@ from rasp_pi_workshop.agent.agent import create_agent
 from rasp_pi_workshop.agent.interactive import interactive_agent_loop
 
 # Import tools
-from tools.temperature import measure_temperature
-from tools.humidity import measure_humidity
+from rasp_pi_workshop.tools.temperature import measure_temperature
+from rasp_pi_workshop.tools.humidity import measure_humidity
 
 
 def main():
