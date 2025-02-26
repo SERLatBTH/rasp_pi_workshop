@@ -14,9 +14,9 @@ from llama_index.core.tools import FunctionTool
 from rasp_pi_workshop import connect, exit_sensor
 
 # Import agent components
-from agent.llm import setup_llm
-from agent.agent import create_agent
-from agent.interactive import interactive_agent_loop
+from rasp_pi_workshop.agent.llm import setup_llm
+from rasp_pi_workshop.agent.agent import create_agent
+from rasp_pi_workshop.agent.interactive import interactive_agent_loop
 
 # Import tools
 from tools.temperature import measure_temperature
