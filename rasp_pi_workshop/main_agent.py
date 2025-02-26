@@ -9,6 +9,7 @@ how to create custom tools.
 Usage:
     python main_inter.py
 """
+from llama_index.core.tools import FunctionTool
 
 from rasp_pi_workshop import connect, exit_sensor
 
@@ -18,8 +19,8 @@ from agent.agent import create_agent
 from agent.interactive import interactive_agent_loop
 
 # Import tools
-from tools.temperature import TemperatureTool
-from tools.humidity import HumidityTool
+from tools.temperature import measure_temperature
+from tools.humidity import measure_humidity
 
 
 def main():
@@ -40,14 +41,17 @@ def main():
         api_base="http://localhost:11434",
         timeout=360
     )
-    
+
+    temperature_tool = FunctionTool.from_defaults(fn=measure_temperature)
+    humidity_tool = FunctionTool.from_defaults(fn=measure_humidity)
+
     # Create agent with tools
     print("Creating agent with tools...")
     agent = create_agent(
         llm=llm,
         tools=[
-            TemperatureTool(),
-            HumidityTool(),
+            temperature_tool,
+            humidity_tool,
             # Add more tools here as needed
         ]
     )
