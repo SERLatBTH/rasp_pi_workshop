@@ -5,13 +5,13 @@
 .PHONY: help
 help:
 	@echo "Available commands:"
-	@echo "  make help         		- Show this help message"
-	@echo "  make os-deps      		- Install OS dependencies"
-	@echo "  make install-uv   		- Install uv package manager if not present"
-	@echo "  make setup-venv   		- Create Python virtual environment"
-	@echo "  make activate-venv 	- Show instructions to activate the virtual environment"
-	@echo "  make install-deps 		- Install Python dependencies from pyproject.toml"
-	@echo "  make install-ollama    - Install Ollama"
+	@echo "  make help				- Show this help message"
+	@echo "  make os-deps			- Install OS dependencies"
+	@echo "  make install-uv		- Install uv package manager if not present"
+	@echo "  make setup-venv		- Create Python virtual environment"
+	@echo "  make activate-venv		- Show instructions to activate the virtual environment"
+	@echo "  make install-deps		- Install Python dependencies from pyproject.toml"
+	@echo "  make install-ollama	- Install Ollama"
 
 # Install OS dependencies
 .PHONY: os-deps
