@@ -38,7 +38,7 @@ install-uv:
 
 # Create Python virtual environment
 .PHONY: setup-venv
-setup-venv: install-uv
+setup-venv:
 	@echo "Creating Python virtual environment..."
 	uv venv --python python3.12
 	@echo "Virtual environment created successfully."
@@ -50,7 +50,7 @@ activate-venv:
 
 # Install Python dependencies
 .PHONY: install-deps
-install-deps: setup-venv
+install-deps:
 	@echo "Installing Python dependencies from pyproject.toml..."
 	uv sync
 	@echo "Python dependencies installed successfully."
