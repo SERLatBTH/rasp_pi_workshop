@@ -40,7 +40,8 @@ def main():
         model="smollm2:360m",  # Replace with your model name
         temperature=0.4,
         max_tokens=4096,
-        api_base="http://localhost:11434"
+        api_base="http://localhost:11434",
+        timeout=360
     )
     
     # Create agent with tools

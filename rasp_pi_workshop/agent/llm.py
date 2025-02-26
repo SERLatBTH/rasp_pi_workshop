@@ -8,7 +8,8 @@ def setup_llm(
     model="your-chosen-model",
     temperature=0.7,
     max_tokens=512,
-    api_base="http://localhost:11434"
+    api_base="http://localhost:11434",
+    timeout=60,
 ):
     """
     Set up the LLM with Ollama as an OpenAI-compatible endpoint.
@@ -27,4 +28,5 @@ def setup_llm(
         temperature=temperature,
         max_new_tokens=max_tokens,
         base_url=api_base,
+        request_timeout=timeout,
     )
