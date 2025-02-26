@@ -1,40 +1,32 @@
 """
 Humidity sensor tool for the agent.
 """
-import sys
 from typing import Any, Dict
 
-sys.path.append("rasp_pi_workshop")  # To import from the repository
 from rasp_pi_workshop import read_sensor_humidity, INVALID_VALUE
 
-from rasp_pi_workshop.tools.base import DocumentedTool
 
-
-class HumidityTool(DocumentedTool):
+def measure_humidity(self, **kwargs: Any) -> Dict[str, Any]:
     """
     Tool for getting the current humidity from the DHT22 sensor.
+
+    Get the current humidity from the sensor.
+
+    Returns:
+        Dict[str, Any]: A dictionary containing the humidity data. If the humidity data is invalid, an error message is returned.
+        Has the status key with the value "success" if the humidity data is valid, and "error" if the humidity data is invalid.
+        If the humidity data is valid, the dictionary contains the "humidity" value and the "unit" of measurement.
     """
-    
-    name = "humidity_sensor"
-    description = "Gets the current humidity from the DHT22 sensor"
-    
-    def _execute(self, **kwargs: Any) -> Dict[str, Any]:
-        """
-        Get the current humidity from the sensor.
-        
-        Returns:
-            Dict[str, Any]: A dictionary containing the humidity data
-        """
-        humidity = read_sensor_humidity()
-        
-        if humidity == INVALID_VALUE:
-            return {
-                "error": "Failed to read humidity from sensor",
-                "status": "error"
-            }
-        
+    humidity = read_sensor_humidity()
+
+    if humidity == INVALID_VALUE:
         return {
-            "humidity": humidity,
-            "unit": "percent",
-            "status": "success"
+            "error": "Failed to read humidity from sensor",
+            "status": "error"
         }
+
+    return {
+        "humidity": humidity,
+        "unit": "percent",
+        "status": "success"
+    }
