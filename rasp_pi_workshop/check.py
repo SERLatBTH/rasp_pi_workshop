@@ -1,5 +1,5 @@
 from time import sleep
-from  rasp_pi_workshop import connect, count, led_off, led_on, \
+from rasp_pi_workshop import connect, count, led_off, led_on, \
     read_sensor_humidity, read_sensor_temperature, \
     exit_sensor
 
