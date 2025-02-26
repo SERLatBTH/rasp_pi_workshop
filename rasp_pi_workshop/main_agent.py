@@ -9,10 +9,7 @@ how to create custom tools.
 Usage:
     python main_inter.py
 """
-import sys
 
-# Add the repository to the path
-sys.path.append("rasp_pi_workshop")
 from rasp_pi_workshop import connect, exit_sensor
 
 # Import agent components
