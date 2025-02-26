@@ -26,4 +26,10 @@ def py_code_exec(code_as_str: str) -> None:
     Returns:
         None
     """
-    eval(code_as_str)
+    print("Executing the Python code...")
+    print("=====================================")
+    print(code_as_str)
+    print("=====================================")
+
+    # Execute the code
+    exec(code_as_str)
