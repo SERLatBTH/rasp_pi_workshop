@@ -55,7 +55,7 @@ def main():
         tools=[
             temperature_tool,
             humidity_tool,
-            py_code_exec_tool,
+            # py_code_exec_tool,
             # Add more tools here as needed
         ]
     )
