@@ -69,9 +69,10 @@ def interactive_agent_loop(agent: ReActAgent):
         # Create a callback to capture and display the agent's thinking
         callback = VerboseCallback()
         callback_manager = CallbackManager([callback])
+        agent.callback_manager = callback_manager
         
         # Run the agent with verbose output
-        response = agent.chat(user_input, callback_manager=callback_manager)
+        response = agent.chat(user_input)
         
         print(f"\n✅ FINAL RESPONSE:\n{response}")
         print("\n==== END OF PROCESS ====")
