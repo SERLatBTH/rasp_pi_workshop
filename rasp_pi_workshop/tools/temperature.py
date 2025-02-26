@@ -6,11 +6,16 @@ from typing import Any, Dict
 from rasp_pi_workshop import read_sensor_temperature, INVALID_VALUE
 
 
-def measure_temperature(self, **kwargs: Any) -> Dict[str, Any]:
+def measure_temperature() -> Dict[str, Any]:
     """
     Get the current temperature from the DHT22 sensor.
     Returns the JSON structure with `temperature`, `unit` as of unit of temperature and function call `status`
     (can be either 'success' or 'error').
+
+    Doesn't require any argument as an input.
+
+    Args:
+        None
 
     Returns:
         Dict[str, Any]: A dictionary containing the temperature data

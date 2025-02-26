@@ -6,11 +6,14 @@ from typing import Any, Dict
 from rasp_pi_workshop import read_sensor_humidity, INVALID_VALUE
 
 
-def measure_humidity(self, **kwargs: Any) -> Dict[str, Any]:
+def measure_humidity() -> Dict[str, Any]:
     """
     Tool for getting the current humidity from the DHT22 sensor.
 
-    Get the current humidity from the sensor.
+    Doesn't require any argument as an input.
+
+    Args:
+        None
 
     Returns:
         Dict[str, Any]: A dictionary containing the humidity data. If the humidity data is invalid, an error message is returned.
