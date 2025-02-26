@@ -13,7 +13,7 @@ import sys
 
 # Add the repository to the path
 sys.path.append("rasp_pi_workshop")
-from __init__ import connect, exit_sensor
+from rasp_pi_workshop import connect, exit_sensor
 
 # Import agent components
 from agent.llm import setup_llm
