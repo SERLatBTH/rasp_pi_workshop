@@ -1,5 +1,7 @@
 from time import sleep
-from  __init__ import connect, count, led_off, led_on, read_sensor_humidity, read_sensor_temperature
+from  __init__ import connect, count, led_off, led_on, \
+    read_sensor_humidity, read_sensor_temperature, \
+    exit_sensor
 
 
 def main():
@@ -34,3 +36,4 @@ def main():
 if __name__ == "__main__":
     connect()
     main()
+    exit_sensor()

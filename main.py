@@ -25,3 +25,4 @@ def main():
 if __name__ == "__main__":
     connect()
     main()
+    exit_sensor()
