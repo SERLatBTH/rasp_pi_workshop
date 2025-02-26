@@ -1,5 +1,19 @@
 # Raspberry Pi Workshop Instructions
 
+## List of available commands
+
+- `print()` - Outputs a message to the console
+- `count()` - Returns the number of times the program has looped
+- `sleep(seconds)` - Pauses the program for a specified amount of time
+- `led_on()` - Turns on the LED light
+- `led_off()` - Turns off the LED light
+- `read_sensor_temperature()` - Reads the temperature from the sensor
+- `read_sensor_humidity()` - Reads the humidity from the sensor
+
+### Bonus commands for advanced users
+- `motor_forward()` - Turns the motor forward. This is a bonus command
+- `motor_backward()` - Turns the motor backward. This is a bonus command
+
 ## Introduction
 
 Welcome to the Raspberry Pi Workshop!
@@ -17,7 +31,7 @@ It can be used by developers and non-developers alike.
 
 ## Task 0: Hello World
 
-Before we begin, I want you to take a look on what you can see in the other document.
+Before we begin, I want you to take a look on what you can see in the section at the beginning of the document.
 You have a section called `List of available commands` where you can see what our software is capable of.
 Underneath is a section called `def main()`, this is where we will write all your code for this workshop.
 
