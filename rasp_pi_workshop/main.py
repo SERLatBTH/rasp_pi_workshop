@@ -1,6 +1,6 @@
 from time import sleep
-from __init__ import *
-from __motor_controll__ import *
+from rasp_pi_workshop import *
+from rasp_pi_workshop.__motor_controll__ import *
 
 '''
 List of available commands:
