@@ -41,6 +41,7 @@ After the hands-on coding experience, the workshop organizer shall ask the stude
    - Run `make help` to see all available commands
    - Run `make os-deps` to install all required OS dependencies
    - Run `make install-uv` to install the uv package manager
+   - Restart the terminal
    - Run `make setup-venv` to create a Python virtual environment
    - Run `make install-deps` to install Python dependencies
    - Use `make install-ollama` to install the ollama
