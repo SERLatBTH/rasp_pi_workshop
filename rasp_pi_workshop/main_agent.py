@@ -21,6 +21,7 @@ from rasp_pi_workshop.agent.interactive import interactive_agent_loop
 # Import tools
 from rasp_pi_workshop.tools.temperature import measure_temperature
 from rasp_pi_workshop.tools.humidity import measure_humidity
+from rasp_pi_workshop.tools.py_code_exec import py_code_exec
 
 
 def main():
@@ -44,6 +45,8 @@ def main():
 
     temperature_tool = FunctionTool.from_defaults(fn=measure_temperature)
     humidity_tool = FunctionTool.from_defaults(fn=measure_humidity)
+    py_code_exec_tool = FunctionTool.from_defaults(fn=py_code_exec)
+
 
     # Create agent with tools
     print("Creating agent with tools...")
@@ -52,6 +55,7 @@ def main():
         tools=[
             temperature_tool,
             humidity_tool,
+            py_code_exec_tool,
             # Add more tools here as needed
         ]
     )
