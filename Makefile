@@ -18,7 +18,7 @@ os-deps:
 	@echo "Installing OS dependencies..."
 	sudo apt update -y
 	sudo apt upgrade -y
-	sudo apt install git code python3 python3-dev python3-pip libgpiod2 curl -y
+	sudo apt install git code python3 python3-dev python3-pip libgpiod2 curl fonts-noto-color-emoji -y
 	sudo apt full-upgrade -y
 	sudo apt autoremove -y
 	@echo "OS dependencies installed successfully."
