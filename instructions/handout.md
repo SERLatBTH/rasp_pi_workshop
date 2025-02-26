@@ -1,5 +1,16 @@
 # Raspberry Pi Workshop Instructions
 
+## Scripts to use
+
+### Check the hardware
+`rasp_pi_workshop_check` - Initiates the sequence to check the hardware setup. Refers to the `./check.py` file.
+
+### Run main program
+`rasp_pi_workshop` - Initiates the main program for the workshop. This is the main file that you are going to mdify. Refers to the `./main.py` file.
+
+### Run the agent
+`rasp_pi_workshop_agent` - Initiates the agent program for the workshop. This is the file that you are going to use to interact with the hardware through LM. Refers to the `./main_agent.py` file.
+
 ## List of available commands
 
 - `print()` - Outputs a message to the console
