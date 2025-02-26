@@ -37,7 +37,15 @@ After the hands-on coding experience, the workshop organizer shall ask the stude
 2. Flash the latest version of Raspberry PI OS (with a desktop environment) on a SD-card using the Raspberry Pi Imager
 3. Setup a wireless network so that the Pi can connect to the internet
 4. Clone this repository on the Pi
-5. Run `sudo install_workshop_dependencies.sh` inside of the cloned repository directory to install all Linux dependencies
+5. Use the provided Makefile to set up the environment:
+   - Run `make help` to see all available commands
+   - Run `make os-deps` to install all required OS dependencies
+   - Run `make install-uv` to install the uv package manager
+   - Run `make setup-venv` to create a Python virtual environment
+   - Run `make install-deps` to install Python dependencies
+   - Use `make activate-venv` to see instructions for activating the virtual environment
+   - Use `make install-ollama` to install the ollama
+6. Run `ollama run smollm2:360m` to start the LM server
 
 ## Bill of Materials (BOM)
 
