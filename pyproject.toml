@@ -1,0 +1,25 @@
+[project]
+name = "rasp-pi-workshop"
+version = "1.0.0"
+description = "Raspberry Pi Smart Home Workshop. Both with plain and agentic LM integration"
+requires-python = ">=3.12"
+dependencies = [
+    "gpiod~=2.3.0",
+    "adafruit-circuitpython-lis3dh~=5.2.4",
+    "adafruit-circuitpython-dht~=4.0.7",
+    "llama-index~=0.12.20",
+    "llama-index-llms-ollama>=0.5.2",
+]
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["rasp_pi_workshop"]
+
+[project.scripts]
+rasp_pi_workshop = "rasp_pi_workshop.main:main"
+rasp_pi_workshop_agent = "rasp_pi_workshop.main_inter:main"
+rasp_pi_workshop_check = "rasp_pi_workshop.check:main"
+
